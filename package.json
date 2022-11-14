@@ -1,5 +1,5 @@
 {
-  "name": "ktsn-npm-package-example",
+  "name": "@Roman-Shchukin/ktsn-npm-package-example",
   "version": "1.0.1",
   "main": "index.js",
   "unpkg": "index.browser.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
       "type": "git",
-      "url": "Roman-Shchukin"
+      "url": "https://github.com/Roman-Shchukin/npm-package-example"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Roman-Shchukin"
