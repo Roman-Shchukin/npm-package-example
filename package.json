@@ -9,7 +9,7 @@
   "license": "MIT",
   "author": {
     "name": "azu",
-    "email": "azu@mail.com",
+    "email": "azu@mail.com"
   },
   "repository": {
       "type": "git",
@@ -17,5 +17,5 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Roman-Shchukin"
-  },
+  }
 }
