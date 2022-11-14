@@ -6,5 +6,16 @@
   "author": "katashin",
   "description": "Package example",
   "keywords": ["example"],
-  "license": "MIT"
+  "license": "MIT",
+  "author": {
+    "name": "azu",
+    "email": "azu@mail.com",
+  },
+  "repository": {
+      "type": "git",
+      "url": "Roman-Shchukin"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Roman-Shchukin"
+  },
 }
