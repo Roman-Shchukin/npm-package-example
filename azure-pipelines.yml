@@ -14,29 +14,22 @@ jobs:
     pool:
         vmImage: macos-latest
     steps:
-    - task: CmdLine@2
-      inputs:
-        script: 'ls'
     - task: npmAuthenticate@0
       inputs:
         workingFile: .npmrc
 
-#  - job: ubuntu_test
-#    pool:
-#        vmImage: ubuntu-latest
-#    steps:
-#    - task: DownloadGithubNpmPackage@1
-#      inputs:
-#        packageName: "@roman-shchukin/ktsn-npm-package-example"
-#        version: 1.0.1
-#        externalEndpoints: github.com_Roman-Shchukin
+  - job: ubuntu_test
+    pool:
+        vmImage: ubuntu-latest
+    steps:
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: .npmrc
 
-#  - job: windows_test
-#    pool:
-#        vmImage: windows-latest
-#    steps:
-#    - task: DownloadGithubNpmPackage@1
-#      inputs:
-#        packageName: "@roman-shchukin/ktsn-npm-package-example"
-#        version: 1.0.1
-#        externalEndpoints: github.com_Roman-Shchukin
+  - job: windows_test
+    pool:
+        vmImage: windows-latest
+    steps:
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: .npmrc
