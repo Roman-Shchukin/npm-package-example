@@ -27,8 +27,8 @@ jobs:
         workingFile: .npmrc
 
   - job: windows_test
-    pool: Default
-#        vmImage: windows-latest
+    pool: #Default
+        vmImage: windows-latest
     steps:
     - task: npmAuthenticate@0
       inputs:
