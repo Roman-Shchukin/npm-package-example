@@ -17,6 +17,7 @@ jobs:
     - task: npmAuthenticate@0
       inputs:
         workingFile: .npmrc
+      condition: eq('false', 'true')
 
   - job: ubuntu_test
     pool:
@@ -25,6 +26,7 @@ jobs:
     - task: npmAuthenticate@0
       inputs:
         workingFile: .npmrc
+      condition: eq('false', 'true')
 
   - job: windows_test
     pool: #Default
@@ -33,3 +35,4 @@ jobs:
     - task: npmAuthenticate@0
       inputs:
         workingFile: .npmrc
+      condition: eq('false', 'true')
