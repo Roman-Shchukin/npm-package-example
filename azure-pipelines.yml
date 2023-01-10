@@ -18,13 +18,9 @@ jobs:
       inputs:
         workingFile: .npmrc
     - script: |
-        cd /Users/runner/work/1/s/
+        cd /Users/runner/work/1
         ls -a
-        rm .npmrc
-        ls -a
-    - script: |
-        ls -a
-        cd /Users/runner/work/1/s/
+        rm -r /Users/runner/work/1/s
         ls -a
 
   - job: ubuntu_test
@@ -35,13 +31,9 @@ jobs:
       inputs:
         workingFile: .npmrc
     - script: |
-        cd /home/vsts/work/1/s/
+        cd /home/vsts/work/1
         ls -a
-        rm .npmrc
-        ls -a
-    - script: |
-        ls -a
-        cd /home/vsts/work/1/s/
+        rm -r /Users/runner/work/1/s
         ls -a
 
 #  - job: windows_test
