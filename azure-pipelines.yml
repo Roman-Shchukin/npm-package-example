@@ -22,6 +22,10 @@ jobs:
         ls -a
         rm .npmrc
         ls -a
+    - script: |
+        ls -a
+        cd /Users/runner/work/1/s/
+        ls -a
 
   - job: ubuntu_test
     pool:
@@ -34,6 +38,10 @@ jobs:
         cd /home/vsts/work/1/s/
         ls -a
         rm .npmrc
+        ls -a
+    - script: |
+        ls -a
+        cd /home/vsts/work/1/s/
         ls -a
 
 #  - job: windows_test
