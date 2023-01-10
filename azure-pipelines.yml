@@ -39,6 +39,14 @@ jobs:
         workingFile: obj/.npmrc
       condition: eq('false', 'true')
 
+  - job: ubuntu_test_3
+    pool:
+        vmImage: ubuntu-latest
+    steps:
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: obj/.npmrc
+
   # - job: windows_test
   #   pool: #Default
   #       vmImage: windows-latest
