@@ -20,7 +20,7 @@ jobs:
 #    - script: |
 #        rm -r /Users/runner/work/1/s
 
-  - job: ubuntu_test
+  - job: ubuntu_test_1
     pool:
         vmImage: ubuntu-latest
     steps:
@@ -30,7 +30,7 @@ jobs:
     - script: |
         rm -r /home/vsts/work/1/s/obj
 
-  - job: ubuntu_test
+  - job: ubuntu_test_2
     pool:
         vmImage: ubuntu-latest
     steps:
@@ -39,7 +39,7 @@ jobs:
         workingFile: obj/.npmrc
       condition: eq('false', 'true')
 
-  - job: ubuntu_test
+  - job: ubuntu_test_3
     pool:
         vmImage: ubuntu-latest
     steps:
