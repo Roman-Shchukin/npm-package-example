@@ -30,6 +30,25 @@ jobs:
     - script: |
         rm -r /home/vsts/work/1/s/obj
 
+  - job: ubuntu_test
+    pool:
+        vmImage: ubuntu-latest
+    steps:
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: obj/.npmrc
+      condition: eq('false', 'true')
+
+  - job: ubuntu_test
+    pool:
+        vmImage: ubuntu-latest
+    steps:
+    - task: npmAuthenticate@0
+      inputs:
+        workingFile: obj/.npmrc
+    - script: |
+        rm -r /home/vsts/work/1/s
+
   # - job: windows_test
   #   pool: #Default
   #       vmImage: windows-latest
