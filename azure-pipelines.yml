@@ -10,15 +10,15 @@
 #  vmImage: windows-latest
 
 jobs:
-  - job: macos_test
-    pool:
-        vmImage: macos-latest
-    steps:
-    - task: npmAuthenticate@0
-      inputs:
-        workingFile: .npmrc
-    - script: |
-        rm -r /Users/runner/work/1/s
+#  - job: macos_test
+#    pool:
+#        vmImage: macos-latest
+#    steps:
+#    - task: npmAuthenticate@0
+#      inputs:
+#        workingFile: obj/.npmrc
+#    - script: |
+#        rm -r /Users/runner/work/1/s
 
   - job: ubuntu_test
     pool:
@@ -26,16 +26,16 @@ jobs:
     steps:
     - task: npmAuthenticate@0
       inputs:
-        workingFile: .npmrc
+        workingFile: obj/.npmrc
     - script: |
         rm -r /home/vsts/work/1/s
 
-  - job: windows_test
-    pool: #Default
-        vmImage: windows-latest
-    steps:
-    - task: npmAuthenticate@0
-      inputs:
-        workingFile: .npmrc
-    - script: |
-        rmdir D:\a\1\s
+  # - job: windows_test
+  #   pool: #Default
+  #       vmImage: windows-latest
+  #   steps:
+  #   - task: npmAuthenticate@0
+  #     inputs:
+  #       workingFile: .npmrc
+  #   - script: |
+  #       rmdir D:\a\1\s
