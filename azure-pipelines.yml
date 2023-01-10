@@ -33,7 +33,7 @@ jobs:
     - script: |
         cd /home/vsts/work/1
         ls -a
-        rm -r /Users/runner/work/1/s
+        rm -r /home/vsts/work/1/s
         ls -a
 
 #  - job: windows_test
