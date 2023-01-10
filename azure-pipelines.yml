@@ -19,9 +19,9 @@ jobs:
         workingFile: .npmrc
     - script: |
         cd /home/vsts/work/1/s/
-        ls
+        ls -a
         rm .npmrc
-        ls
+        ls -a
 
   - job: ubuntu_test
     pool:
@@ -32,9 +32,9 @@ jobs:
         workingFile: .npmrc
     - script: |
         cd /home/vsts/work/1/s/
-        ls
+        ls -a
         rm .npmrc
-        ls
+        ls -a
 
 #  - job: windows_test
 #    pool: #Default
