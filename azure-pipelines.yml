@@ -18,7 +18,10 @@ jobs:
       inputs:
         workingFile: .npmrc
     - script: |
-        rm /home/vsts/work/1/s/.npmrc
+        cd /home/vsts/work/1/s/
+        ls
+        rm .npmrc
+        ls
 
   - job: ubuntu_test
     pool:
@@ -28,14 +31,17 @@ jobs:
       inputs:
         workingFile: .npmrc
     - script: |
-        rm /home/vsts/work/1/s/.npmrc
+        cd /home/vsts/work/1/s/
+        ls
+        rm .npmrc
+        ls
 
-  - job: windows_test
-    pool: #Default
-        vmImage: windows-latest
-    steps:
-    - task: npmAuthenticate@0
-      inputs:
-        workingFile: .npmrc
-    - script: |
-        rm /home/vsts/work/1/s/.npmrc
+#  - job: windows_test
+#    pool: #Default
+#        vmImage: windows-latest
+#    steps:
+#    - task: npmAuthenticate@0
+#      inputs:
+#        workingFile: .npmrc
+#    - script: |
+#        rm /home/vsts/work/1/s/.npmrc
