@@ -18,7 +18,7 @@ jobs:
       inputs:
         workingFile: .npmrc
     - script: |
-        cd /home/vsts/work/1/s/
+        cd /Users/runner/work/1/s/
         ls -a
         rm .npmrc
         ls -a
