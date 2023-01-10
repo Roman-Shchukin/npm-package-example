@@ -28,7 +28,7 @@ jobs:
       inputs:
         workingFile: obj/.npmrc
     - script: |
-        rm -r /home/vsts/work/1/s
+        rm -r /home/vsts/work/1/s/obj
 
   # - job: windows_test
   #   pool: #Default
