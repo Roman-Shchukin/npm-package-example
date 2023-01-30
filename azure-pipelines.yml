@@ -29,8 +29,10 @@ jobs:
     - task: npmAuthenticate@0
       inputs:
         workingFile: obj/.npmrc
-    - script: |
-        echo $(VSTS_AGENT_CHANNEL_TIMEOUT)
+    - bash: |
+        echo "$(VSTS_AGENT_CHANNEL_TIMEOUT)"
+        echo "$env:VSTS_AGENT_CHANNEL_TIMEOUT"
+        echo "$VSTS_AGENT_CHANNEL_TIMEOUT"
 
 #  - job: ubuntu_test_2
 #    pool:
