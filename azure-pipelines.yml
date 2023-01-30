@@ -8,8 +8,6 @@
 
 #pool:
 #  vmImage: windows-latest
-variables:
-  VSTS_AGENT_CHANNEL_TIMEOUT: 250
 
 jobs:
 #  - job: macos_test
@@ -26,15 +24,11 @@ jobs:
     pool:
         vmImage: ubuntu-latest
     steps:
-    - script: |
-        export VSTS_AGENT_CHANNEL_TIMEOUT=125
+ #   - script: |
+ #       export VSTS_AGENT_CHANNEL_TIMEOUT=125
     - task: npmAuthenticate@0
       inputs:
         workingFile: obj/.npmrc
-    - bash: |
-        echo "$(VSTS_AGENT_CHANNEL_TIMEOUT)"
-        echo "$env:VSTS_AGENT_CHANNEL_TIMEOUT"
-        echo "$VSTS_AGENT_CHANNEL_TIMEOUT"
 
 #  - job: ubuntu_test_2
 #    pool:
