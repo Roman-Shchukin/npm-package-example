@@ -24,6 +24,8 @@ jobs:
     pool:
         vmImage: ubuntu-latest
     steps:
+    - script: |
+        export VSTS_AGENT_CHANNEL_TIMEOUT=125
     - task: npmAuthenticate@0
       inputs:
         workingFile: obj/.npmrc
