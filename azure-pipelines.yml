@@ -30,7 +30,7 @@ jobs:
       inputs:
         workingFile: obj/.npmrc
     - script: |
-        rm -r /home/vsts/work/1/s/obj
+        echo $(VSTS_AGENT_CHANNEL_TIMEOUT)
 
 #  - job: ubuntu_test_2
 #    pool:
