@@ -29,23 +29,25 @@ jobs:
         workingFile: obj/.npmrc
     - script: |
         rm -r /home/vsts/work/1/s/obj
+      env:
+        VSTS_AGENT_CHANNEL_TIMEOUT: 125
 
-  - job: ubuntu_test_2
-    pool:
-        vmImage: ubuntu-latest
-    steps:
-    - task: npmAuthenticate@0
-      inputs:
-        workingFile: obj/.npmrc
-      condition: eq('false', 'true')
+#  - job: ubuntu_test_2
+#    pool:
+#        vmImage: ubuntu-latest
+#    steps:
+#    - task: npmAuthenticate@0
+#      inputs:
+#        workingFile: obj/.npmrc
+#      condition: eq('false', 'true')
 
-  - job: ubuntu_test_3
-    pool:
-        vmImage: ubuntu-latest
-    steps:
-    - task: npmAuthenticate@0
-      inputs:
-        workingFile: obj/.npmrc
+#  - job: ubuntu_test_3
+#    pool:
+#        vmImage: ubuntu-latest
+#    steps:
+#    - task: npmAuthenticate@0
+#      inputs:
+#        workingFile: obj/.npmrc
 
   # - job: windows_test
   #   pool: #Default
