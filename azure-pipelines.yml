@@ -8,6 +8,9 @@
 
 #pool:
 #  vmImage: windows-latest
+variables:
+  env:
+    VSTS_AGENT_CHANNEL_TIMEOUT: 250
 
 jobs:
 #  - job: macos_test
