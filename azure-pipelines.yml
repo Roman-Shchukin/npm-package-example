@@ -21,8 +21,8 @@ jobs:
 #        rm -r /Users/runner/work/1/s
 
   - job: ubuntu_test_1
-    pool:
-        vmImage: ubuntu-latest
+    pool: Default
+#        vmImage: ubuntu-latest
     steps:
  #   - script: |
  #       export VSTS_AGENT_CHANNEL_TIMEOUT=125
